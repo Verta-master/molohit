@@ -6,7 +6,8 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>MoloHit</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -33,12 +34,15 @@
     <symbol class="icon-cart">
       <path d="M405.3,192L320,0h-42.7l85.3,192H405.3z M234.7,0H192l-85.3,192h42.7L234.7,0z M42.7,469.3c0,23.5,19.1,42.7,42.7,42.7	h341.3c23.5,0,42.7-19.1,42.7-42.7l21.3-192H21.3L42.7,469.3z M362.7,320h42.7L384,469.3h-42.7L362.7,320z M234.7,320h42.7v149.3 h-42.7V320z M149.3,320l21.3,149.3H128L106.7,320H149.3z M490.7,213.3H21.3C9.5,213.3,0,222.9,0,234.7V256h512v-21.3	C512,222.9,502.5,213.3,490.7,213.3z"/>
     </symbol>
+    <symbol class="icon-search">
+      <path d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22	c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583	c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0	C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806	c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25	c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z"/>
+    </symbol>
   </svg>
   
   <header class="header">
     <div class="header__top">
       <div class="wrapper">
-        <address class="contacts-location">Тверь, ул. Пушкина, 15, строение 10</address>
+        <address class="contacts-text contacts-text__location">Тверь, ул. Пушкина, 15, строение 10</address>
         <div class="header__contacts">
           <a href="tel:+74950123456" class="contacts-link">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 287.32 287.32" style="enable-background:new 0 0 287.32 287.32;" xml:space="preserve">
@@ -85,9 +89,21 @@
         </div>
         <div class="header__block">
           <div class="header__icons">
-            <a href="#" class="btn header__btn"></a>
+            <a href="#" class="btn btn--gold header__btn">Перезвоните мне</a>
             <div class="search">
-              
+              <button type="button" class="search__open">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.792 183.792" style="enable-background:new 0 0 183.792 183.792;" xml:space="preserve">
+                  <use href="#icon-search"></use>
+                </svg>
+              </button>
+              <form action="#" class="search__form">
+                <input type="text" class="search__input" placeholder="Поиск">
+                <button type="submit" class="search__btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.792 183.792" style="enable-background:new 0 0 183.792 183.792;" xml:space="preserve">
+                    <use href="#icon-search"></use>
+                  </svg>
+                </button>
+              </form>
             </div>
             <a href="#" class="header__icon" title="Отложенные">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 217.408 217.408" style="enable-background:new 0 0 217.408 217.408;" xml:space="preserve">
@@ -102,7 +118,24 @@
             </a>
           </div>
           <nav class="menu">
-            
+            <button type="button" class="menu__open"></button>
+            <ul class="menu__list">
+              <li class="menu__item menu__item--active">
+                <a href="#" class="menu__link">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Наши продукты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Доставка и оплата</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Рецепты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Контакты</a>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
@@ -110,15 +143,435 @@
   </header>
   
   <main>
+    <section class="promo">
+      <div class="owl-carousel owl-theme promo__slider">
+        <div class="item promo__slide" style="background-image:url(img/images/slide-1.jpg);">
+          <div class="wrapper">
+            <div class="promo__wrap">
+              <p class="promo__title">Молочная продукция</p>
+              <p class="promo__subtitle">от фермеров</p>
+              <a href="#" class="btn promo__btn">Каталог</a>
+            </div>
+          </div>
+        </div>
+        <div class="item promo__slide" style="background-image:url(img/images/slide-3.jpg);">
+          <div class="wrapper">
+            <div class="promo__wrap">
+              <p class="promo__title">Сыры</p>
+              <p class="promo__subtitle">от фермеров</p>
+              <a href="#" class="btn promo__btn">Каталог</a>
+            </div>
+          </div>
+        </div>
+        <div class="item promo__slide" style="background-image:url(img/images/slide-2.jpg);">
+          <div class="wrapper">
+            <div class="promo__wrap">
+              <p class="promo__title">Овощи, фрукты и ягоды</p>
+              <p class="promo__subtitle">от фермеров</p>
+              <a href="#" class="btn promo__btn">Каталог</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
+    <section class="category">
+      <div class="wrapper category__wrap">
+        <ul class="category__list">
+          <li class="category__item">
+            <a href="#" class="category__img">
+              <img src="img/images/category-1.png" alt="Молочные продукты">
+            </a>
+            <div class="category__info">
+              <a href="#" class="category__title">Молочные продукты</a>
+              <ul class="category__links">
+                <li><a href="#">Молоко,</a></li>
+                <li><a href="#">Масло,</a></li>
+                <li><a href="#">Сливки,</a></li>
+                <li><a href="#">Творог,</a></li>
+                <li><a href="#">Йогурт,</a></li>
+                <li><a href="#">Сметана,</a></li>
+                <li><a href="#">Кефир</a></li>
+              </ul>
+              <a href="#" class="btn category__btn">Заказать</a>
+            </div>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__img">
+              <img src="img/images/category-2.png" alt="Сыры">
+            </a>
+            <div class="category__info">
+              <a href="#" class="category__title">Сыры</a>
+              <ul class="category__links">
+                <li><a href="#">Твердые сыры,</a></li>
+                <li><a href="#">Полутвердые сыры,</a></li>
+                <li><a href="#">Творожные сыры,</a></li>
+                <li><a href="#">Козий сыр,</a></li>
+                <li><a href="#">Овечий сыр</a></li>
+              </ul>
+              <a href="#" class="btn category__btn">Заказать</a>
+            </div>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__img">
+              <img src="img/images/category-3.png" alt="Мороженое">
+            </a>
+            <div class="category__info">
+              <a href="#" class="category__title">Мороженое</a>
+              <ul class="category__links">
+                <li><a href="#">На сливках,</a></li>
+                <li><a href="#">Фруктово-ягодное,</a></li>
+                <li><a href="#">Шоколадное</a></li>
+              </ul>
+              <a href="#" class="btn category__btn">Заказать</a>
+            </div>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__img">
+              <img src="img/images/category-4.png" alt="Пчелопродукция">
+            </a>
+            <div class="category__info">
+              <a href="#" class="category__title">Пчелопродукция</a>
+              <ul class="category__links">
+                <li><a href="#">Мед,</a></li>
+                <li><a href="#">Прополис,</a></li>
+                <li><a href="#">Воск,</a></li>
+                <li><a href="#">Перга</a></li>
+              </ul>
+              <a href="#" class="btn category__btn">Заказать</a>
+            </div>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__img">
+              <img src="img/images/category-5.png" alt="Овощи, фрукты и ягоды">
+            </a>
+            <div class="category__info">
+              <a href="#" class="category__title">Овощи, фрукты и ягоды</a>
+              <ul class="category__links">
+                <li><a href="#">Овощи,</a></li>
+                <li><a href="#">Фрукты,</a></li>
+                <li><a href="#">Ягоды,</a></li>
+                <li><a href="#">Зелень</a></li>
+              </ul>
+              <a href="#" class="btn category__btn">Заказать</a>
+            </div>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__img">
+              <img src="img/images/category-1.png" alt="сырные трюфели">
+            </a>
+            <div class="category__info">
+              <a href="#" class="category__title">Сырные трюфели</a>
+              <ul class="category__links">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+              <a href="#" class="btn category__btn">Заказать</a>
+            </div>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__img">
+              <img src="img/images/category-1.png" alt="молодняк">
+            </a>
+            <div class="category__info">
+              <a href="#" class="category__title">Молодняк</a>
+              <ul class="category__links">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+              <a href="#" class="btn category__btn">Заказать</a>
+            </div>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__img">
+              <img src="img/images/category-1.png" alt="">
+            </a>
+            <div class="category__info">
+              <a href="#" class="category__title"></a>
+              <ul class="category__links">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+              <a href="#" class="btn category__btn">Заказать</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="action">
+      <div class="wrapper">
+        <p class="title-2">Предложение недели</p>
+        <p class="action__subtitle">Только самые свежие продукты прямо с фермы</p>
+        <div class="action__wrap">
+          <figure class="action__img">
+            <img src="img/images/img-1.jpg" alt="Предложение недели">
+          </figure>
+          <div class="action__info">
+            <p class="action__proposal"><span>-20%</span> на фермерскую сметану</p>
+            <p class="action__date">Со 2 по 10 июня</p>
+            <div class="action__text">
+              <p>Краткое описание, в чем заключается акционное предложение. Краткое описание, в чем заключается акционное предложение. Краткое описание, в чем заключается акционное предложение.</p>
+            </div>
+            <a href="#" class="btn action__btn">Заказать</a>
+            <a href="#" class="link action__link">Смотреть все акции</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="catalog">
+      <div class="wrapper">
+        <p class="title-2">Наша продукция</p>
+        
+      </div>
+    </section>
+    
+    <section class="benefits">
+      <div class="wrapper">
+        <p class="title-2">Почему выбирают нас?</p>
+        <div class="benefits__wrap">
+          <div class="benefits__info">
+            <ul class="benefits__list">
+              <li class="benefits__item">
+                <figure class="benefits__icon">
+                  <img src="img/icons/87.svg" alt="Почему выбирают нас">
+                </figure>
+                <div class="benefits__text">
+                  <p class="benefits__title">Краткое описание преимущества</p>
+                  <p>Краткое описание преимущества. Краткое описание преимущества. Краткое описание преимущества. Краткое описание преимущества.</p>
+                </div>
+              </li>
+              <li class="benefits__item">
+                <figure class="benefits__icon">
+                  <img src="img/icons/90.svg" alt="Почему выбирают нас">
+                </figure>
+                <div class="benefits__text">
+                  <p class="benefits__title">Краткое описание преимущества</p>
+                  <p>Краткое описание преимущества. Краткое описание преимущества. Краткое описание преимущества. Краткое описание преимущества.</p>
+                </div>
+              </li>
+              <li class="benefits__item">
+                <figure class="benefits__icon">
+                  <img src="img/icons/94.svg" alt="Почему выбирают нас">
+                </figure>
+                <div class="benefits__text">
+                  <p class="benefits__title">Краткое описание преимущества</p>
+                  <p>Краткое описание преимущества. Краткое описание преимущества. Краткое описание преимущества. Краткое описание преимущества.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <figure class="benefits__img">
+            <img src="img/images/img-2.jpg" alt="Почему выбирают нас?">
+          </figure>
+        </div>
+      </div>
+    </section>
+    
+    <section class="review">
+      <div class="wrapper">
+        <p class="title-2">Отзывы</p>
+        <div class="owl-carousel owl-theme review__slider">
+          <div class="item review__slide">
+            <p>Небольшой текст с отзывом о продукции, персонале и качестве обслуживания. Небольшой текст с отзывом о продукции, персонале и качестве обслуживания.</p>
+            <p>Небольшой текст с отзывом о продукции, персонале и качестве обслуживания. Небольшой текст с отзывом о продукции, персонале и качестве обслуживания. Небольшой текст с отзывом о продукции, персонале и качестве обслуживания.</p>
+            <div class="review__bottom">
+              <div class="review__rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star.svg" alt="rating">
+              </div>
+              <div class="review__person">
+                <p class="review__name">Марина Петрова</p>
+                <p class="review__position">бухгалтер</p>
+              </div>
+            </div>
+          </div>
+          <div class="item review__slide">
+            <p>Небольшой текст с отзывом о продукции, персонале и качестве обслуживания. Небольшой текст с отзывом о продукции, персонале и качестве обслуживания. Небольшой текст с отзывом о продукции, персонале и качестве обслуживания.</p>
+            <div class="review__bottom">
+              <div class="review__rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star.svg" alt="rating">
+              </div>
+              <div class="review__person">
+                <p class="review__name">Марина Петрова</p>
+                <p class="review__position">бухгалтер</p>
+              </div>
+            </div>
+          </div>
+          <div class="item review__slide">
+            <p>Небольшой текст с отзывом о продукции, персонале и качестве обслуживания. Небольшой текст с отзывом о продукции, персонале и качестве обслуживания.</p>
+            <p>Небольшой текст с отзывом о продукции, персонале и качестве обслуживания. Небольшой текст с отзывом о продукции, персонале и качестве обслуживания. Небольшой текст с отзывом о продукции, персонале и качестве обслуживания.</p>
+            <div class="review__bottom">
+              <div class="review__rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star-fill.svg" alt="rating">
+                <img src="img/icons/star.svg" alt="rating">
+              </div>
+              <div class="review__person">
+                <p class="review__name">Марина Петрова</p>
+                <p class="review__position">бухгалтер</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="blog">
+      <div class="wrapper">
+        <p class="title-2">Рецепты из наших продуктов</p>
+        <ul class="blog__list">
+          <li class="blog__item">
+            <a href="#" class="blog__img">
+              <img src="img/images/img-4.jpg" alt="Название статьи блога или рецепта">
+            </a>
+            <div class="blog__info">
+              <time datetime="2022-03-20">20 марта, 2022</time>
+              <p class="blog__title">Название статьи блога или рецепта</p>
+              <p>Краткое описание, что увидит посетитель, открыв ссылку. Краткое описание, что увидит посетитель, открыв ссылку. Краткое описание, что увидит посетитель, открыв ссылку.</p>
+              <a href="#" class="link blog__link">Подробнее</a>
+            </div>
+          </li>
+          <li class="blog__item">
+            <a href="#" class="blog__img">
+              <img src="img/images/img-5.jpg" alt="Название статьи блога или рецепта">
+            </a>
+            <div class="blog__info">
+              <time datetime="2022-03-20">20 марта, 2022</time>
+              <p class="blog__title">Название статьи блога или рецепта</p>
+              <p>Краткое описание, что увидит посетитель, открыв ссылку. Краткое описание, что увидит посетитель, открыв ссылку. Краткое описание, что увидит посетитель, открыв ссылку.</p>
+              <a href="#" class="link blog__link">Подробнее</a>
+            </div>
+          </li>
+          <li class="blog__item">
+            <a href="#" class="blog__img">
+              <img src="img/images/img-6.jpg" alt="Название статьи блога или рецепта">
+            </a>
+            <div class="blog__info">
+              <time datetime="2022-03-20">20 марта, 2022</time>
+              <p class="blog__title">Название статьи блога или рецепта</p>
+              <p>Краткое описание, что увидит посетитель, открыв ссылку. Краткое описание, что увидит посетитель, открыв ссылку. Краткое описание, что увидит посетитель, открыв ссылку.</p>
+              <a href="#" class="link blog__link">Подробнее</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
   
   <footer class="footer">
-    
+    <div class="wrapper">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <img src="img/images/logo-round.png" alt="logo">
+        </div>
+        <nav class="footer__nav footer__nav--clients">
+          <p class="footer__title">Клиентам</p>
+          <ul class="footer__menu">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Как сделать заказ</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">Рецепты</a></li>
+            <li><a href="#">Акции</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__nav footer__nav--products">
+          <p class="footer__title">Продукция</p>
+          <ul class="footer__menu">
+            <li><a href="#">Молочные продукты</a></li>
+            <li><a href="#">Сыры</a></li>
+            <li><a href="#">Мороженое</a></li>
+            <li><a href="#">Пчелопродукция</a></li>
+            <li><a href="#">Овощи, фрукты и ягоды</a></li>
+            <li><a href="#">Сырные трюфели</a></li>
+            <li><a href="#">Молодняк</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <p class="footer__title">Контакты</p>
+          <a href="tel:+74950123456" class="contacts-link">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 287.32 287.32" style="enable-background:new 0 0 287.32 287.32;" xml:space="preserve">
+              <use href="icon-phone"></use>
+            </svg>
+            <span>+7 (495) 012-34-56</span>
+          </a>
+          <a href="mailto:info@site.ru" class="contacts-link">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 109.294 109.294" style="enable-background:new 0 0 109.294 109.294;" xml:space="preserve">
+              <use href="icon-email"></use>
+            </svg>
+            <span>info@site.ru</span>
+          </a>
+          <address class="contacts-text contacts-text__location">Тверь, ул. Пушкина, 15, строение 10</address>
+          <p class="contacts-text contacts-text__time">с 9:00 до 21:00 без выходных</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link" title="VK">
+                <svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <use href="icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" title="Telegram">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <use href="icon-tg"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" title="WhatsApp">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <use href="icon-wa"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="wrapper footer__wrap">
+        <span>(c) 2022. Все права зарезервированы</span>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
   </footer>
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+
+<!-- Slider -->
+  <script>
+  $('.promo__slide').owlCarousel({
+    loop: true,
+    nav: true,
+    dots: true,
+    navText:["",""],
+    items: 1,
+  });
+    
+  $('.review__slide').owlCarousel({
+    loop: true,
+    nav: true,
+    dots: true,
+    navText:["",""],
+    items: 1,
+  });
+  </script>
 </body>
 </html>
