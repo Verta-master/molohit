@@ -1508,6 +1508,7 @@ section {
   height: auto !important;
 }
 .catalog__slide {
+  width: 100% !important;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -1793,7 +1794,7 @@ section {
   }
   .category__item {
     display: block;
-    width: auto;
+    width: 100% !important;
   }
   .category__img {
     width: 100%;
