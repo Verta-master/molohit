@@ -96,17 +96,9 @@
       height: 30px;
     }
   }
+  .header__bottom,
   .header__top {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .header__bottom {
-    padding-top: 0;
-  }
-  .header__icons {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    display: none;
   }
   .menu__open {
     display: block;
@@ -124,13 +116,13 @@
   }
   .menu__list {
     display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: #fff;
-    border-top: 1px solid rgba(0,0,0,0.2);
+//    position: absolute;
+//    top: 100%;
+//    right: 0;
+//    left: 0;
+//    z-index: 1000;
+//    background-color: #fff;
+//    border-top: 1px solid rgba(0,0,0,0.2);
   }
   .logo img {
     height: 60px;
@@ -142,58 +134,30 @@
   .header__btn {
     height: 30px;
   }
-  .menu__item {
-    margin-left: 0;
-    padding-bottom: 0;
+  .mobile {
+    display: block;
+    
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
-  .menu__link {
-    padding: 10px;
-    padding-right: 40px;
-  }
-  .menu__btn {
-    left: auto;
-    right: 0;
+  .header {
+    position: fixed;
     top: 0;
-    z-index: 10;
-    width: 40px;
-    height: 38px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
   }
-  .menu__item--active .menu__link {
-    border-bottom: 0;
-    background-color: @yellow;
+  main {
+    padding-top: 60px;
   }
-  .menu__links,
-  .menu__sublist {
-    position: static;
+  .header .contacts-link {
+    margin-right: 0;
   }
-  .menu__links,
-  .menu__sublist {
-    width: 100%;
-    padding-top: 0;
-    box-shadow: none;
-  }
-  .menu__sublink {
-    padding-left: 30px;
-    padding-right: 40px;
-  }
-  .menu__next {
-    width: 40px;
-    height: 38px;
-    bottom: auto;
-    z-index: 10;
-    background-image: url(../img/icons/arrow-down.svg);
-    background-size: 24px 24px;
-  }
-  .menu__btn--top,
-  .menu__next--top {
-    transform: rotate(-180deg);
-  }
-  .menu__item:hover .menu__sublist,
-  .menu__subitem:hover .menu__links {
-    display: none;
-  }
-  .menu__links li a {
-    padding-left: 50px;
+  .header__icon {
+    margin-left: 0;
   }
   .promo__title {
     font-size: 36px;
@@ -306,41 +270,36 @@
       transform: rotate(-180deg);
     }
   }
+  .search__form {
+    top: 100%;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: auto;
+    opacity: 1;
+    padding: 10px;
+    border: 0;
+    border-radius: 0;
+    display: none;
+  }
+  .search {
+    position: static;
+  }
+  .search__input {
+    display: inline-block;
+    vertical-align: middle;
+    width: ~"calc(100% - 50px)";
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+  .search__btn {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 //-------------------------------------------------------
 @media (max-width: 766px) {
-  .header__top {
-    display: none;
-  }
-  .header__icons {
-    position: static;
-    margin-bottom: 0;
-  }
-  .header__btn {
-    font-size: 0;
-    width: 30px;
-    background-color: #fff;
-    border: 0;
-    background-image: url(../img/icons/phone.svg);
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-    background-position: center;
-  }
-  .header__block {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .menu__open {
-    margin-left: 20px;
-  }
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
   .title,
   .title-2,
   h1 {
@@ -349,12 +308,6 @@
 }
 //-------------------------------------------------------
 @media (max-width: 480px) {
-  .header__btn {
-    margin-right: 10px;
-  }
-  .header__icon {
-    margin-left: 10px;
-  }
   .promo__wrap {
     padding-top: 100px;
   }
@@ -416,31 +369,14 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  .search__form {
-    top: 100%;
-    bottom: auto;
-    left: 0;
-    right: 0;
-    width: auto;
-    opacity: 1;
-    padding: 10px;
-    border: 0;
-    border-radius: 0;
+  .header .social__link,
+  .header .contacts-link--email {
     display: none;
   }
-  .search {
-    position: static;
+  .logo img {
+    height: 50px;
   }
-  .search__input {
-    display: inline-block;
-    vertical-align: middle;
-    width: ~"calc(100% - 50px)";
-    font-size: 16px;
-    border-radius: 10px;
-    border: 1px solid rgba(0,0,0,0.2);
-  }
-  .search__btn {
-    display: inline-block;
-    vertical-align: middle;
+  main {
+    padding-top: 50px;
   }
 }
