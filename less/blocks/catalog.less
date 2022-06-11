@@ -127,6 +127,13 @@
   background-size: 30px 30px;
   background-position: center;
   border-radius: 10px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    background-color: @blue;
+    .transition();
+  }
 }
 .catalog__btn {
   width: 180px;

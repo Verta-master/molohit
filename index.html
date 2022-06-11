@@ -39,7 +39,7 @@
         </div>
         <div class="header__block">
           <div class="header__icons">
-            <a href="#" class="btn btn--gold header__btn">Перезвоните мне</a>
+            <a data-fancybox data-src="#call" href="javascript:;" class="btn btn--gold header__btn">Перезвоните мне</a>
             <div class="search">
               <button type="button" class="search__open"></button>
               <form action="#" class="search__form">
@@ -719,6 +719,18 @@
       </div>
     </div>
   </footer>
+  
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="modal__title">Закажите обратный звонок</p>
+    <form action="#" class="form">
+      <input type="text" class="form__input" placeholder="Имя">
+      <input type="tel" class="form__input" placeholder="Телефон">
+      <input type="checkbox" id="checkbox" class="form__checkbox">
+      <label for="checkbox" class="form__label">Я не робот</label>
+      <button type="submit" class="btn btn--gold form__btn">Заказать</button>
+    </form>
+  </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
