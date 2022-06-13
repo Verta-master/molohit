@@ -1,0 +1,198 @@
+.filter {
+  margin-bottom: 30px;
+}
+.filter__drop {
+  font-size: 16px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.filter__close,
+.filter__dropdown,
+.checkbox,
+.filter__btn {
+  display: none;
+}
+.filter__dropdown {
+  margin-top: 30px;
+}
+.filter__input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid @blue;
+  
+  &::placeholder {
+    opacity: 0.7;
+  }
+}
+.filter__title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  .transition();
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: -10px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/icons/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    .transition();
+  }
+  &:hover {
+    color: @blue;
+    .transition();
+  }
+  &--top {
+    &::before {
+      transform: rotate(-180deg);
+      .transition();
+    }
+  }
+}
+.filter__block {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.filter__btns {
+  padding: 20px;
+}
+.checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  cursor: pointer;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 18px;
+    color: @blue;
+    border-radius: 5px;
+    border: 1px solid @blue;
+  }
+}
+.checkbox:checked + .checkbox-label::before {
+  content: "\2713";
+}
+.filter__submit {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.filter__cancel {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0.7;
+  .transition();
+  
+  &:hover,
+  &:active {
+    opacity: 1;
+    .transition();
+  }
+}
+.filter__price {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  
+  .filter__input {
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+  }
+  &::before {
+    content: "\2014";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    line-height: 50px;
+    transform: translateX(-50%);
+  }
+}
+.filter__range {
+  margin-bottom: 20px;
+  
+  .ui-slider {
+    position: relative;
+  }
+  /* Ползунок */
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: @blue;
+    box-shadow: 0px 2px 3.6px 0.4px rgba(46, 46, 46, 0.32);
+    border: 1px solid #fff;
+    cursor: pointer;
+    outline: none;
+  }
+  .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    overflow: hidden;
+  }
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  .ui-slider-horizontal {
+    height: 6px;
+  }
+  /* позиционируем ползунки */
+  .ui-slider-horizontal .ui-slider-handle { 
+    top: -8px;
+    margin-left: -8px;
+  }
+  .ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+  }
+  .ui-slider-horizontal .ui-slider-range-min { 
+    left: 0;
+  }
+  .ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+  }
+  /* оформление полосы по которой ходит ползунок */
+  .ui-widget-content { 
+    border: 1px solid @blue;
+    background-color: #fff;
+  }
+  /* оформление активного участка (между двумя ползунками) */
+  .ui-widget-header { 
+    border: 1px solid @blue;
+    background-color: @blue;
+  }
+  /* скругление для полосы слайдера */
+  .ui-corner-all {
+    border-radius: 4px;
+  }
+}

@@ -18,29 +18,24 @@
   line-height: 38px;
   text-decoration: none;
   border-radius: 10px;
-  border: 1px solid @blue;
+  border: 1px solid @yellow;
   
   &--active {
-    background-color: @blue;
+    background-color: @yellow;
     pointer-events: none;
   }
-  &--prev,
-  &--next {
-    border: 0;
-    
-    &:hover,
-    &:active {
-      color: @blue;
-      background-color: rgba(255,255,255,0) !important;
-    }
-  }
+}
+.pages__link--prev,
+.pages__link--next {
+  font-size: 24px;
+  line-height: 30px;
 }
 a.pages__link {
   .transition();
   
   &:hover,
   &:active {
-    background-color: @blue;
+    background-color: @yellow;
     .transition();
   }
 }
@@ -54,14 +49,17 @@ a.pages__link {
   display: block;
   max-width: 50%;
   text-decoration: none;
-  color: @blue;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 24px;
   .transition();
   
+  span {
+    font-size: 24px;
+    line-height: 1;
+  }
   &:hover,
   &:active {
-    color: @dark;
+    color: @yellow;
     .transition();
   }
   &:nth-child(2) {

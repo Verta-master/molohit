@@ -64,6 +64,95 @@
   .category__links {
     margin-bottom: 20px;
   }
+  .subcategory__img img {
+    width: auto !important;
+  }
+  .filter__drop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 0;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 10px 0 0 10px;
+    opacity: 0;
+    .transition();
+    
+    &--open {
+      opacity: 1;
+      z-index: 2000;
+      width: 280px;
+      .transition();
+    }
+  }
+  .filter__wrap {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    padding-top: 50px;
+  }
+  .filter__close {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-image: url(../img/icons/cross.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    background-color: #fff;
+    border-radius: 7px;
+  }
+  .filter__btn,
+  .sidebar__btn {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+  }
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .sidebar__category,
+  .filter {
+    margin-right: 20px;
+    width: 280px;
+  }
+  .sidebar__menu {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+    width: 280px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  .sidebar__category {
+    position: relative;
+  }
+  .sidebar__btn--border {
+    border-radius: 10px 10px 0 0;
+  }
+  .wrapper__columns {
+    display: block;
+  }
+  .wrapper__content {
+    width: 100%;
+  }
+  .filter__price .filter__input {
+    width: 90px;
+  }
+  .catalog__list {
+    margin-right: 0;
+  }
 }
 //-------------------------------------------------------
 @media (max-width: 1022px) {
@@ -312,6 +401,12 @@
   .blog__info {
     display: block;
   }
+  .catalog__list {
+    justify-content: space-around;
+  }
+  .catalog__item {
+    margin-right: 0;
+  }
 }
 //-------------------------------------------------------
 @media (max-width: 766px) {
@@ -340,12 +435,18 @@
   .blog__item {
     width: 100% !important;
   }
+  .sorting__block,
   .blog__list {
     display: block;
   }
+  .sidebar__menu,
+  .sorting__select,
   .action__img,
   .benefits__img {
     width: 100%;
+  }
+  .sorting__select {
+    margin-top: 5px;
   }
   .action__text {
     padding-left: 0;
@@ -374,10 +475,16 @@
     text-align: center;
     margin-bottom: 10px;
   }
+  .filter,
+  .sidebar__category,
   .footer__contacts, 
   .footer__nav,
   .footer__logo {
     width: 100%;
+  }
+  .filter,
+  .sidebar__category {
+    margin-right: 0;
   }
   .footer__logo {
     text-align: center;
