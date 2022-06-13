@@ -177,8 +177,8 @@
             <nav class="sidebar__category">
               <button type="button" class="btn sidebar__btn">Категории</button>
               <ul class="sidebar__menu">
-                <li class="sidebar__item">
-                  <a href="#" class="sidebar__link sidebar__link--active">Молочные продукты</a>
+                <li class="sidebar__item sidebar__item--active">
+                  <a href="#" class="sidebar__link">Молочные продукты</a>
                   <button type="button" class="sidebar__down"></button>
                   <ul class="sidebar__links">
                     <li><a href="#">Молоко</a></li>
@@ -244,7 +244,9 @@
               <div class="filter__drop">
                 <div class="filter__wrap">
                   <button type="button" class="filter__close"></button>
-                  <input type="text" class="filter__input" placeholder="Артикул">
+                  <div class="filter__block">
+                    <input type="text" class="filter__input" placeholder="Артикул">
+                  </div>
                   <div class="filter__block">
                     <p class="filter__title">Цена</p>
                     <div class="filter__dropdown">
@@ -368,23 +370,6 @@
                   <option value="2">По возрастанию цены</option>
                   <option value="3">По убыванию цены</option>
                 </select>
-              </div>
-              <div class="sorting__btns">
-                <button type="button" class="sorting__btn sorting__btn--list">
-                  <svg width="52px" height="52px" viewBox="0 0 52 52">
-                    <path d="M50,15.52H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H50a2,2,0,0,1,2,2V13.52A2,2,0,0,1,50,15.52Zm-46-4H48V4H4Z"></path>
-                    <path d="M50,33.76H2a2,2,0,0,1-2-2V20.24a2,2,0,0,1,2-2H50a2,2,0,0,1,2,2V31.76A2,2,0,0,1,50,33.76Zm-46-4H48V22.24H4Z"></path>
-                    <path d="M50,52H2a2,2,0,0,1-2-2V38.48a2,2,0,0,1,2-2H50a2,2,0,0,1,2,2V50A2,2,0,0,1,50,52ZM4,48H48V40.48H4Z"></path>
-                  </svg>
-                </button>
-                <button type="button" class="sorting__btn sorting__btn--active sorting__btn--plate">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                    <path d="M2,28h24c1.104,0,2-0.896,2-2V2c0-1.104-0.896-2-2-2H2C0.896,0,0,0.896,0,2v24C0,27.104,0.896,28,2,28z M4,4h20v20H4V4z"></path>
-                    <path d="M64,2c0-1.104-0.896-2-2-2H38c-1.104,0-2,0.896-2,2v24c0,1.104,0.896,2,2,2h24c1.104,0,2-0.896,2-2V2z M60,24H40V4h20V24z"></path>
-                    <path d="M2,64h25c1.104,0,2-0.896,2-2V37c0-1.104-0.896-2-2-2H2c-1.104,0-2,0.896-2,2v25C0,63.104,0.896,64,2,64z M4,39h21v21H4V39 z"></path>
-                    <path d="M62,36H38c-1.104,0-2,0.896-2,2v24c0,1.104,0.896,2,2,2h24c1.104,0,2-0.896,2-2V38C64,36.896,63.104,36,62,36z M60,60H40 V40h20V60z"></path>
-                  </svg>
-                </button>
               </div>
             </div>
             
@@ -573,8 +558,8 @@
               <a href="#" class="pages__link pages__link--next">&raquo;</a>
             </nav>
             <nav class="nav">
-              <a href="#" class="nav__link">&lsaquo; Пчелопродукция</a>
-              <a href="#" class="nav__link">Овощи, фрукты и ягоды &rsaquo;</a>
+              <a href="#" class="nav__link"><span>&lsaquo;</span> Пчелопродукция</a>
+              <a href="#" class="nav__link">Овощи, фрукты и ягоды <span>&rsaquo;</span></a>
             </nav>
             
             <article class="info">
@@ -694,29 +679,17 @@
         });
       });
       $('.filter__wrap').niceScroll({
-        cursorcolor: '#82c99f',
+        cursorcolor: '#83cce1',
       });
       $('.filter__close').click(function() {
         $('.filter__drop').removeClass('filter__drop--open');
-        $('.overlay').removeClass('overlay--show');
       })
     }
-  </script>
-  
-  <!-- View switcher -->
-  <script>
-    $('.sorting__btn--list').click(function(e) {
-      e.preventDefault();
-      $('.sorting__btn--plate').removeClass('sorting__btn--active');
-      $(this).addClass('sorting__btn--active');
-      $('.catalog__list').addClass('catalog__list--table');
-    });
-    $('.sorting__btn--plate').click(function(e) {
-      e.preventDefault();
-      $('.sorting__btn--list').removeClass('sorting__btn--active');
-      $(this).addClass('sorting__btn--active');
-      $('.catalog__list').removeClass('catalog__list--table');
-    });
+    
+    $('.sidebar__down').click(function() {
+      $(this).toggleClass('sidebar__down--top');
+      $(this).next().slideToggle();
+    })
   </script>
 </body>
 </html>
