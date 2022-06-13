@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -666,8 +667,56 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/range-slider.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/subcategory.js"></script>
+  
+  <!-- Filter -->
+  <script>
+    $('.filter__title').click(function() {
+      $(this).next().slideToggle();
+      $(this).toggleClass('filter__title--top');
+    })
+    
+    if (window.innerWidth < 1201) {
+      $('.sidebar__btn').click(function() {
+        event.preventDefault();
+        $('.sidebar__menu').slideToggle();
+        $(this).toggleClass('sidebar__btn--border');
+      });
+      $('.filter__btn').click(function() {
+        event.preventDefault();
+        $('.filter__drop').addClass('filter__drop--open');
+        $('.filter__wrap').scroll(function(){
+          $('.filter__wrap').getNiceScroll().resize();
+        });
+      });
+      $('.filter__wrap').niceScroll({
+        cursorcolor: '#82c99f',
+      });
+      $('.filter__close').click(function() {
+        $('.filter__drop').removeClass('filter__drop--open');
+        $('.overlay').removeClass('overlay--show');
+      })
+    }
+  </script>
+  
+  <!-- View switcher -->
+  <script>
+    $('.sorting__btn--list').click(function(e) {
+      e.preventDefault();
+      $('.sorting__btn--plate').removeClass('sorting__btn--active');
+      $(this).addClass('sorting__btn--active');
+      $('.catalog__list').addClass('catalog__list--table');
+    });
+    $('.sorting__btn--plate').click(function(e) {
+      e.preventDefault();
+      $('.sorting__btn--list').removeClass('sorting__btn--active');
+      $(this).addClass('sorting__btn--active');
+      $('.catalog__list').removeClass('catalog__list--table');
+    });
+  </script>
 </body>
 </html>
