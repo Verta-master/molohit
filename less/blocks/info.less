@@ -1,0 +1,23 @@
+.info {
+  ul {
+    .reset();
+    list-style: none;
+    
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 5px;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: @blue;
+      }
+    }
+  }
+}
