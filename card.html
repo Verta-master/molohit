@@ -175,7 +175,7 @@
         <div class="card__wrap">
           <div class="card__view">
             <div class="catalog__labels">
-              <div class="catalog__label catalog__label--sale">Акция</div>
+              <div class="catalog__label catalog__label--sale"><span>Акция</span></div>
             </div>
             <a href="#" class="catalog__like" title="Отложенные"></a>
             <div id="big" class="owl-carousel owl-theme card__slider">
@@ -200,8 +200,8 @@
             <p><b>Артикул:</b> 123456</p>
             <p><b>Производитель:</b> <a href="#">Название</a></p>
             <div class="card__line">
-              <p class="card__presence"></p>
-              <p class="card__presence--no"></p>
+              <p class="card__presence">В наличии</p>
+              <p class="card__presence--no">Под заказ</p>
               <div class="card__stars">
                 <div class="card__rating">
                   <img src="img/icons/star-fill.svg" alt="rating">
@@ -210,7 +210,7 @@
                   <img src="img/icons/star-fill.svg" alt="rating">
                   <img src="img/icons/star-fill.svg" alt="rating">
                 </div>
-                <a href="#reviews">12</a>
+                <a href="#reviews">(12)</a>
               </div>
             </div>
             <div class="card__line">
@@ -234,7 +234,7 @@
             <div class="card__price">
               <span>Цена:</span>
               <p class="card__newprice"><span>120</span> р/кг</p>
-              <p class="card__oldprice"><span>150</span> р/кг</p>
+              <p class="card__oldprice">150 р/кг</p>
             </div>
             <p><b>Состав:</b> органические сливки нормализованные, закваска молочнокислых микроорганизмов.</p>
             <p><b>Пищевая ценность на 100 грамм:</b></p>
@@ -285,7 +285,7 @@
                     <p class="card__person">Ирина</p>
                     <p>Самая вкусная сметана!</p>
                   </div>
-                  <time datetime="2022-05-23" class="card__time">23 мая 2022</time>
+                  <div class="date">23 мая 2022</div>
                 </li>
                 <li class="card__review">
                   <div class="card__rating">
@@ -297,9 +297,9 @@
                   </div>
                   <div class="card__text">
                     <p class="card__person">Екатерина</p>
-                    <p>Сметана была числом дня доставки. Свежайшая! Очень довольны</p>
+                    <p>Сметана была числом дня доставки. Свежайшая! Очень довольны</p>
                   </div>
-                  <time datetime="2022-05-23" class="card__time">23 мая 2022</time>
+                  <div class="date">23 мая 2022</div>
                 </li>
               </ul>
             </div>
@@ -575,6 +575,7 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/owl-thumbs-sync.js"></script>
   
   <!-- Slider -->
   <script>
@@ -599,6 +600,13 @@
         }
       }
     })
+  </script>
+  
+  <!-- Tabs -->
+  <script>
+    $(function() {
+      $("#tabs").tabs();
+    });
   </script>
 </body>
 </html>
