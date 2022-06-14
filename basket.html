@@ -170,15 +170,7 @@
     
     <section class="shopping">
       <div class="wrapper">
-        <h1 class="title">Корзина</h1>
-        <ul class="shopping__steps">
-	        <li class="shopping__step shopping__step--active">Корзина</li>
-	        <li class="shopping__step">Доставка</li>
-	        <li class="shopping__step">Оплата</li>
-	        <li class="shopping__step">Контактные данные</li>
-	        <li class="shopping__step">Подтверждение заказа</li>
-        </ul>
-        
+        <h1 class="title">Корзина</h1>        
         <div class="shopping__container">
           <div class="tab-1 active">
             <div class="shopping__wrap">
@@ -267,7 +259,6 @@
                   <input name="delivery_id" id="delivery_id_7" value="7" type="radio" data-service="" class="shopping__radio">
                   <label for="delivery_id_7" class="shopping__label delivey__label--icon7"><span>Почтой России</span><i>Обычный, ускоренный,<br>EMS</i></label>
                 </div>
-                <p class="shopping__about">При выборе доставки, проверьте указанный адрес.</p>
               </div>
             </div>
           </div>
@@ -290,7 +281,6 @@
                   <input name="payment_id" id="payment6" value="6" type="radio" class="shopping__radio">
                   <label for="payment6" class="shopping__label shopping__label--icon6"><span>Наличными при доставке</span></label>
                 </div>
-                <p class="shopping__about">Данные способы оплаты доступны для физических лиц. Оплата для юридических лиц производится по счету. Вы можете вернуться к редактированию данных, указать тип и загрузить данные организации или ИП для формирования счета.</p>
               </div>
             </div>
           </div>
@@ -306,16 +296,6 @@
                     <input type="email" name="p2" value="" class="shopping__input shopping__input--name" placeholder="E-mail*" required="">
                     <input type="tel" name="p3" value="" class="shopping__input shopping__input--name" placeholder="Телефон*" required="">
                   </div>
-                  <div class="shopping__line">
-                    <div class="shopping__phys">
-                      <input type="radio" id="shop_search_p11_1" name="p11[]" value="1" checked="" class="shopping__choice">
-                      <label for="shop_search_p11_1" class="shopping__radiolabel">Физ. лицо</label>
-                    </div>
-                    <div class="shopping__law">
-                      <input type="radio" id="shop_search_p11_2" name="p11[]" value="2" class="shopping__choice">
-                      <label for="shop_search_p11_2" class="shopping__radiolabel">Юр. лицо (загрузить реквизиты)</label>
-                    </div>
-                  </div>
                   <div class="inpattachment shopping__line download__file">
                     <div class="shopping__phys"></div>
                     <div class="shopping__law">
@@ -327,34 +307,14 @@
                   </div>
                   <p class="shopping__title">Адрес доставки</p>
                   <div class="shopping__line">
-                    <input type="text" name="p6" value="" class="shopping__input shopping__input--street" placeholder="Улица, проспект*" required="">
-                    <input type="text" name="p7" value="" class="shopping__input shopping__input--house" placeholder="Дом*" required="">
-                    <input type="number" name="p9" size="5" value="" class="shopping__input shopping__input--house" placeholder="кв. / офис*" required="">
+                    <input type="text" name="p6" value="" class="shopping__input shopping__input--name" placeholder="Улица, проспект*" required="">
+                    <input type="text" name="p7" value="" class="shopping__input shopping__input--name" placeholder="Дом*" required="">
+                    <input type="number" name="p9" size="5" value="" class="shopping__input shopping__input--name" placeholder="кв. / офис*" required="">
                   </div>
                   <textarea name="p10" class="shopping__message" placeholder="Комментарии"></textarea>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="shopping__order">
-            <p class="shopping__title shopping__title--icon">Ваш заказ:</p>
-            <div id="order_result_form">
-              <table class="shopping__itog">
-                <tr>
-                  <td>Всего товаров:</td>
-                  <td>1</td>
-                </tr>
-                <tr>
-                  <td>На сумму:</td>
-                  <td>5200&nbsp;р.</td>
-                </tr>
-              </table>
-            </div>
-            <span class="btn shopping__buy btn_ord_next">Продолжить</span>
-            <input type="submit" class="btn shopping__buy btn_ord_sub" style="display:none" value="Продолжить">
-            <span class="btn_ord_prev">Вернуться</span>
-            <p class="shopping__comment">Отправляя форму, я даю согласие на <a href="#">обработку персональных данных</a>.</p>
           </div>
         </div>
         

@@ -2112,6 +2112,18 @@ a.breadcrumbs__link:active::after {
   -webkit-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 }
+.sorting__link {
+  margin-left: 15px;
+  text-decoration: none;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.sorting__link:hover,
+.sorting__link:active {
+  color: #fecc47;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
 .pages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2795,7 +2807,7 @@ a.pages__link:active {
   background-color: #83cce1;
 }
 .shopping__wrap {
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3220,15 +3232,9 @@ a.pages__link:active {
 .shopping__choice:checked + .shopping__radiolabel::before {
   background-color: #83cce1;
 }
-.shopping__input--street {
-  width: calc(100% - 246px);
-}
-.shopping__input--house {
-  width: 98px;
-}
 .shopping__container {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 .shopping__title--green {
   color: #83cce1;
@@ -3461,11 +3467,6 @@ a.pages__link:active {
   }
   .catalog__list {
     margin-right: 0;
-  }
-  .shopping__order {
-    position: static;
-    margin-left: auto;
-    margin-right: auto;
   }
   .shopping__columns,
   .shopping__wrap {
@@ -3752,7 +3753,6 @@ a.pages__link:active {
     font-size: 18px;
   }
   .card__block,
-  .card__wrap,
   .blog__info {
     display: block;
   }
@@ -3763,9 +3763,7 @@ a.pages__link:active {
   .catalog__item {
     margin-right: 0;
   }
-  .card__field,
-  .card__info,
-  .card__view {
+  .card__field {
     width: 100%;
   }
   .card__form {
@@ -3773,8 +3771,17 @@ a.pages__link:active {
     margin-right: auto;
     margin-top: 30px;
   }
+}
+@media (max-width: 840px) {
+  .card__wrap {
+    display: block;
+  }
   .card__view {
+    width: 100%;
     margin-bottom: 30px;
+  }
+  .card__info {
+    width: 100%;
   }
 }
 @media (max-width: 766px) {
@@ -3790,9 +3797,6 @@ a.pages__link:active {
   .shopping__phys,
   .shopping__label {
     width: 100%;
-  }
-  .shopping__steps {
-    display: none;
   }
   .shopping .title {
     margin-bottom: 40px;
@@ -3833,9 +3837,6 @@ a.pages__link:active {
   .shopping__sum {
     max-width: 100%;
     margin-right: auto;
-  }
-  .shopping__wrap {
-    margin-bottom: 50px;
   }
   .shopping__label {
     margin-bottom: 10px;
@@ -4030,9 +4031,6 @@ a.pages__link:active {
     font-size: 12px;
     padding-left: 10px;
     padding-right: 10px;
-  }
-  .shopping__about {
-    font-size: 12px;
   }
   .shopping__number {
     width: 40px;
