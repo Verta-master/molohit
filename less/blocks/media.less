@@ -398,6 +398,8 @@
       font-size: 18px;
     }
   }
+  .card__block,
+  .card__wrap,
   .blog__info {
     display: block;
   }
@@ -406,6 +408,19 @@
   }
   .catalog__item {
     margin-right: 0;
+  }
+  .card__field,
+  .card__info,
+  .card__view {
+    width: 100%;
+  }
+  .card__form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  .card__view {
+    margin-bottom: 30px;
   }
 }
 //-------------------------------------------------------
@@ -475,6 +490,7 @@
     text-align: center;
     margin-bottom: 10px;
   }
+  .card__form,
   .filter,
   .sidebar__category,
   .footer__contacts, 
@@ -499,5 +515,51 @@
   }
   main {
     padding-top: 50px;
+  }
+  .card__review,
+  .card__btns,
+  .card__price,
+  .card__line {
+    display: block;
+  }
+  .card__option,
+  .card__presence {
+    margin-bottom: 20px;
+  }
+  .card__rating,
+  .card__stars {
+    justify-content: flex-start;
+  }
+  .card__newprice,
+  .card__oldprice {
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  .card__info table {
+    font-size: 16px;
+  }
+  .card__text,
+  .card__buy,
+  .card__click {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .card__buy::before {
+    left: 90px;
+  }
+  .card__field {
+    padding: 15px;
+  }
+  .card__review .card__rating {
+    margin-bottom: 10px;
+  }
+  .card__review .date {
+    text-align: left;
+  }
+  .card__slider .owl-nav button.owl-next,
+  .card__slider .owl-nav button.owl-prev {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

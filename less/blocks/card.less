@@ -122,10 +122,14 @@
   border: 1px solid rgba(0,0,0,0.1);
   
   .owl-nav button.owl-prev {
-    left: 15px;
+    left: 15px !important;
   }
   .owl-nav button.owl-next {
-    right: 15px;
+    right: 15px !important;
+  }
+  .owl-nav button.owl-prev,
+  .owl-nav button.owl-next {
+    position: absolute !important;
   }
 }
 .card__thumb,
