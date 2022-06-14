@@ -161,13 +161,14 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid @yellow;
 }
+.form__select,
 .catalog__select {
   width: 180px;
   height: 50px;
   padding: 0 15px;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
-  border: 1px solid @yellow;
+  border: 1px solid rgba(0,0,0,0.1);
   appearance: none;
   background-image: url(../img/icons/arrow-down.svg);
   background-repeat: no-repeat;
@@ -179,6 +180,9 @@
     border: none;
     background-color: transparent;
   }
+}
+.catalog__select {
+  border: 1px solid @yellow;
 }
 .catalog__newprice {
   margin: 0 auto;

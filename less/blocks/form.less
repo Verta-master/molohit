@@ -44,3 +44,32 @@
   border-radius: 10px;
   font-size: 16px;
 }
+.form__num {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.form__change {
+  width: 50px;
+  height: 50px;
+  font-size: 32px;
+  text-align: center;
+  line-height: 40px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    background-color: @blue;
+    .transition();
+  }
+}
+.form__value {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  border-left: 1px solid rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(0,0,0,0.1);
+}

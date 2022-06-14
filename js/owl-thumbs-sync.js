@@ -8,7 +8,7 @@ $(document).ready(function() {
     .owlCarousel({
     items: 1,
     slideSpeed: 2000,
-    nav: false,
+    nav: true,
 //    autoplay: true,
     dots: false,
     loop: true,
@@ -28,10 +28,10 @@ $(document).ready(function() {
       .addClass("current");
   })
     .owlCarousel({
-    items: 2,
+    items: 3,
     dots: false,
-    nav: true,
-    margin: 10,
+    nav: false,
+    margin: 20,
     navText: [
       '',
       ''
