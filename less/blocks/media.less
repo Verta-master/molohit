@@ -144,6 +144,7 @@
   .wrapper__columns {
     display: block;
   }
+  .shopping__contacts,
   .wrapper__content {
     width: 100%;
   }
@@ -152,6 +153,23 @@
   }
   .catalog__list {
     margin-right: 0;
+  }
+  .shopping__order {
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .shopping__columns,
+  .shopping__wrap {
+    display: block;
+  }
+  .shopping__add {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  .shopping__state td:first-child {
+    padding-left: 0;
   }
 }
 //-------------------------------------------------------
@@ -430,6 +448,64 @@
   h1 {
     font-size: 32px;
   }
+  .shopping__input--street,
+  .shopping__input--house,
+  .shopping__law,
+  .shopping__input--name,
+  .shopping__phys,
+  .shopping__label {
+    width: 100%;
+  }
+  .shopping__steps {
+    display: none;
+  }
+  .shopping .title {
+    margin-bottom: 40px;
+  }
+  .shopping__block {
+    padding: 20px;
+  }
+  .delivery__item,
+  .shopping__line,
+  .shopping__table,
+  .shopping__table tbody,
+  .shopping__table td {
+    display: block;
+  }
+  .shopping__table tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .shopping__table {
+    td {
+      padding: 10px 0;
+    }
+  }
+  .shopping__product {
+    width: ~"calc(100% - 100px)";
+    padding-left: 10px !important;
+  }
+  .shopping__price {
+    width: auto;
+  }
+  .shopping__sum {
+    max-width: 100%;
+    margin-right: auto;
+  }
+  .shopping__wrap {
+    margin-bottom: 50px;
+  }
+  .shopping__label {
+    margin-bottom: 10px;
+  }
+  .shopping__input {
+    margin-bottom: 10px;
+  }
+  .shopping__message {
+    margin-top: 10px;
+  }
 }
 //-------------------------------------------------------
 @media (max-width: 480px) {
@@ -561,5 +637,80 @@
   .card__slider .owl-nav button.owl-prev {
     margin-left: 0;
     margin-right: 0;
+  }
+  .shopping__state,
+  .shopping__state tbody,
+  .shopping__state tr,
+  .shopping__state td {
+    display: block;
+  }
+  .shopping__state {
+    td {
+      width: 100%;
+    }
+    tr {
+      margin-bottom: 10px;
+    }
+  }
+  .shopping__total span {
+    margin-left: 10px;
+  }
+  .shopping__product {
+    width: 100%;
+    padding-left: 0 !important;
+    text-align: center;
+  }
+  .shopping__img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .shopping__table {
+    td:first-child {
+      width: 100%;
+    }
+  }
+  .shopping__price {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .shopping__title {
+    text-align: center;
+  }
+  .shopping__label {
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: center;
+    
+    span {
+      padding-left: 50px;
+    }
+    i {
+      font-size: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .shopping__about {
+    font-size: 12px;
+  }
+  .shopping__number {
+    width: 40px;
+  }
+  .shopping__price {
+    font-size: 16px;
+  }
+  .shopping__value {
+    font-size: 12px;
+  }
+  .shopping__delete {
+    width: auto;
+  }
+  .shopping__table tr {
+    margin-bottom: 20px;
+  }
+  .btn_ord_prev,
+  .shopping__buy,
+  .shopping__submit {
+    font-size: 18px;
   }
 }
